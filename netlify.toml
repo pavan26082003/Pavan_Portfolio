@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+
+# ✅ Enable asset optimization (minify HTML, CSS, JS + compress images)
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = false
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+
+# ✅ Redirect www to non-www
+[[redirects]]
+  from = "https://www.pavankiran.netlify.app/*"
+  to = "https://pavankiran.netlify.app/:splat"
+  status = 301
+  force = true

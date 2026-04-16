@@ -1,1 +1,37 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Pavan Kiran | Full Stack Developer Hyderabad",
+  "short_name": "Pavan Kiran",
+  "description": "Python Full Stack Developer in Hyderabad — React, Django, REST APIs. Available for freelance and full-time roles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#00d4ff",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "technology", "business"],
+  "shortcuts": [
+    {
+      "name": "Hire Me",
+      "url": "/#contact",
+      "description": "Contact Pavan Kiran for web development projects"
+    },
+    {
+      "name": "View Projects",
+      "url": "/#projects",
+      "description": "See Pavan Kiran's featured web development projects"
+    }
+  ]
+}
