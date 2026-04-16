@@ -43,6 +43,10 @@
     content="Python Full Stack Developer in Hyderabad. React, Django, REST APIs. Available for hire." />
   <meta name="twitter:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.png" />
   <meta name="twitter:creator" content="@pavankiran" />
+  <meta name="twitter:site" content="@pavankiran" />
+
+  <!-- ✅ og:image:alt for social sharing accessibility -->
+  <meta property="og:image:alt" content="Pavan Kiran - Python Full Stack Developer in Hyderabad" />
 
   <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://pavankiran.netlify.app/" />
@@ -313,6 +317,36 @@
         ]
       },
       {
+        "@type": "LocalBusiness",
+        "@id": "https://pavankiran.netlify.app/#localbusiness",
+        "name": "Pavan Kiran - Web Developer Hyderabad",
+        "description": "Python Full Stack Developer in Hyderabad offering web development services for startups, businesses, and real estate clients.",
+        "url": "https://pavankiran.netlify.app/",
+        "telephone": "+917815827400",
+        "email": "pavankiran26082003@gmail.com",
+        "image": "https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN",
+          "postalCode": "500001"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 17.3850,
+          "longitude": 78.4867
+        },
+        "areaServed": ["Hyderabad", "Telangana", "India"],
+        "sameAs": [
+          "https://www.linkedin.com/in/pavan-kiran-nagapuri-720b65259/",
+          "https://github.com/pavan26082003"
+        ],
+        "openingHours": "Mo-Sa 09:00-18:00",
+        "hasMap": "https://maps.google.com/?q=Hyderabad,Telangana,India"
+      },
+      {
         "@type": "FAQPage",
         "@id": "https://pavankiran.netlify.app/#faq",
         "mainEntity": [
@@ -394,7 +428,7 @@
       <button class="close-menu" id="closeMenu" aria-label="Close mobile menu">
         <i class="fas fa-times"></i>
       </button>
-      <nav class="mobile-nav" aria-label="Mobile navigation">
+      <nav class="mobile-nav" role="navigation" aria-label="Mobile navigation">
         <a href="#about" class="mob-link">About</a>
         <a href="#skills" class="mob-link">Skills</a>
         <a href="#projects" class="mob-link">Projects</a>
@@ -706,16 +740,17 @@
         <div class="projects-grid">
 
           <!-- GoRide -->
-          <div class="project-card reveal">
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#22c55e,#16a34a)"></div>
             <div class="featured-badge">Featured</div>
             <div class="project-body">
               <div class="project-tag">Full Stack Web App</div>
-              <div class="project-name">GoRide</div>
-              <div class="project-desc">
-                Full-stack ride-booking application built with React and Django, featuring REST API integration,
-                authentication, and a seamless booking experience.
+              <div class="project-name" itemprop="name">GoRide — Ride Booking App</div>
+              <div class="project-desc" itemprop="description">
+                Full-stack ride-booking app built with React and Django. Features REST API, user authentication, and smooth booking flow.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">React</span>
                 <span class="badge">Python</span>
@@ -733,15 +768,16 @@
           </div>
 
           <!-- Job Finder -->
-          <div class="project-card reveal">
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
             <div class="project-body">
               <div class="project-tag">Web App</div>
-              <div class="project-name">Job Finder</div>
-              <div class="project-desc">
-                Job search platform with structured listings and clean UI, designed to enhance accessibility and user
-                experience.
+              <div class="project-name" itemprop="name">Job Finder Platform</div>
+              <div class="project-desc" itemprop="description">
+                Job search platform with structured listings and clean UI. Built for accessibility and ease of use.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
@@ -758,22 +794,23 @@
 
 
 
-          <!-- Client  Store -->
-          <div class="project-card reveal">
+          <!-- Client Portfolio -->
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
             <div class="featured-badge">Featured</div>
             <div class="project-body">
-              <div class="project-tag">Portfolio</div>
-              <div class="project-name">Stories_BY_MAHESH_THATI </div>
-              <div class="project-desc">
-                A visually appealing portfolio website showcasing projects, skills, and experience with a modern design
-                and smooth animations.
+              <div class="project-tag">Client Portfolio</div>
+              <div class="project-name" itemprop="name">Stories by Mahesh Thati</div>
+              <div class="project-desc" itemprop="description">
+                Client portfolio website with modern design and smooth animations. Built using HTML, CSS, JavaScript, and Lovable AI tool.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
                 <span class="badge">JavaScript</span>
-                <span class="badge">loveable Tool</span>
+                <span class="badge">Lovable AI</span>
               </div>
               <div class="project-links">
                 <a href="https://stories-by-mahesh-thati.netlify.app/" target="_blank" rel="noopener noreferrer nofollow" class="plink"><i
@@ -785,14 +822,16 @@
           </div>
 
           <!-- Apna Store -->
-          <div class="project-card reveal">
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
             <div class="project-body">
               <div class="project-tag">E-Commerce</div>
-              <div class="project-name">Apna Store</div>
-              <div class="project-desc">
+              <div class="project-name" itemprop="name">Apna Store — E-Commerce Site</div>
+              <div class="project-desc" itemprop="description">
                 Responsive e-commerce website with product browsing, cart system, and smooth checkout flow.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
@@ -810,14 +849,16 @@
 
 
           <!-- Spotify Clone -->
-          <div class="project-card reveal">
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#1db954,#1aa34a)"></div>
             <div class="project-body">
               <div class="project-tag">UI Clone</div>
-              <div class="project-name">Spotify Clone</div>
-              <div class="project-desc">
-                Pixel-perfect Spotify UI clone with responsive layout and modern design system using HTML & CSS.
+              <div class="project-name" itemprop="name">Spotify UI Clone</div>
+              <div class="project-desc" itemprop="description">
+                Pixel-perfect Spotify UI clone with responsive layout and modern design system using HTML and CSS.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
@@ -831,14 +872,16 @@
           </div>
 
           <!-- Maa Vibes -->
-          <div class="project-card reveal">
+          <div class="project-card reveal" itemscope itemtype="https://schema.org/SoftwareApplication">
             <div class="project-accent" style="background:linear-gradient(90deg,#00d4ff,#7c3aed)"></div>
             <div class="project-body">
               <div class="project-tag">Music App</div>
-              <div class="project-name">Maa Vibes</div>
-              <div class="project-desc">
-                Web-based music player with playlist support, playback controls, and a visually rich dark UI experience.
+              <div class="project-name" itemprop="name">Maa Vibes — Music Player</div>
+              <div class="project-desc" itemprop="description">
+                Web-based music player with playlist support, playback controls, and a dark UI experience.
               </div>
+              <meta itemprop="applicationCategory" content="WebApplication" />
+              <meta itemprop="operatingSystem" content="Web Browser" />
               <div class="tech-badges">
                 <span class="badge">HTML</span>
                 <span class="badge">CSS</span>
