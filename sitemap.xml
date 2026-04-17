@@ -1,13 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage (single-page app — all sections live here) -->
+  <!-- Homepage -->
   <url>
     <loc>https://pavankiran.netlify.app/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Blog Index -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog 1 — 30-day target -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/portfolio-website-that-gets-hired</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 2 — 30-day target -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/django-rest-api-tutorial-beginners</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 3 — Local SEO -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/real-estate-business-website-hyderabad</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 4 — Traffic magnet -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/react-vs-nextjs-startup-2026</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 5 — Local money keyword -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/web-developer-cost-hyderabad</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 6 — Developer community -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/goride-react-django-case-study</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog 7 — Beginner traffic -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/deploy-django-render-free-2026</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 8 — Employer/recruiter -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/ece-to-full-stack-developer-journey</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog 9 — Startup clients -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/web-development-mistakes-startups-hyderabad</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog 10 — Long-term authority -->
+  <url>
+    <loc>https://pavankiran.netlify.app/blog/tailwind-css-vs-bootstrap-react-2026</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

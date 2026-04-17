@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Django REST API Tutorial for Beginners — Build Your First API in 30 Minutes | Pavan Kiran</title>
+  <meta name="description" content="Learn Django REST Framework from scratch. Build your first REST API in 30 minutes with code examples, Thunder Client testing, and free Render deployment." />
+  <meta name="author" content="Pavan Kiran Nagapuri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pavankiran.netlify.app/blog/django-rest-api-tutorial-beginners" />
+  <meta property="og:title" content="Django REST API Tutorial for Beginners — Build Your First API in 30 Minutes" />
+  <meta property="og:description" content="Build a production-ready REST API with Django REST Framework. Code examples, Thunder Client testing, free Render deployment." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://pavankiran.netlify.app/blog/django-rest-api-tutorial-beginners" />
+  <meta property="og:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Django REST API Tutorial for Beginners" />
+  <meta name="twitter:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Django REST API Tutorial for Beginners — Build Your First API in 30 Minutes",
+    "description": "Learn how to build a production-ready REST API with Django REST Framework. Code examples, Thunder Client testing, and free Render deployment.",
+    "image": "https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp",
+    "author": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "publisher": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "datePublished": "2026-02-01",
+    "dateModified": "2026-04-17",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://pavankiran.netlify.app/blog/django-rest-api-tutorial-beginners" },
+    "keywords": "django rest api tutorial beginners, django rest framework, build rest api django react tutorial, python api tutorial"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pavankiran.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pavankiran.netlify.app/#blog" },
+      { "@type": "ListItem", "position": 3, "name": "Django REST API Tutorial for Beginners", "item": "https://pavankiran.netlify.app/blog/django-rest-api-tutorial-beginners" }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo" onclick="window.location.href='/'">PK.</div>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right"><a href="/#contact" class="hire-btn">Hire Me</a></div>
+  </nav>
+
+  <main class="blog-page">
+    <a href="/#blog" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    <div class="post-tag">Django · Python</div>
+    <h1>Django REST API Tutorial for Beginners — Build Your First API in 30 Minutes</h1>
+    <div class="post-meta">
+      <span><i class="fas fa-user"></i> Pavan Kiran Nagapuri</span>
+      <span><i class="fas fa-calendar"></i> February 1, 2026</span>
+      <span><i class="fas fa-clock"></i> 8 min read</span>
+    </div>
+
+    <div class="post-body">
+      <p>Django REST Framework (DRF) is the standard tool for building APIs in Python. Whether you're building a startup MVP or a full-stack app with a React frontend, DRF makes it fast, clean, and production-ready. This tutorial walks you through building your first REST API from scratch — no prior DRF experience needed.</p>
+
+      <h2>What is Django REST Framework?</h2>
+      <p>Django REST Framework is a powerful toolkit built on top of Django that makes it easy to build Web APIs. It handles serialization (converting Python objects to JSON), authentication, permissions, and routing — all with minimal boilerplate.</p>
+      <p>Why DRF over plain Django views?</p>
+      <ul>
+        <li><strong>Serializers</strong> — automatic model-to-JSON conversion with validation</li>
+        <li><strong>ViewSets</strong> — full CRUD in ~5 lines of code</li>
+        <li><strong>Browsable API</strong> — a built-in UI to test your endpoints in the browser</li>
+        <li><strong>Authentication</strong> — JWT, session, token auth all built in</li>
+      </ul>
+      <p>It's used by companies like Mozilla, Red Hat, and Heroku. For Indian startups and freelance projects, it's the fastest way to ship a backend.</p>
+
+      <h2>Setting Up Your Django Project</h2>
+      <p>Start with a clean virtual environment:</p>
+      <pre><code># Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install Django and DRF
+pip install django djangorestframework
+
+# Create project and app
+django-admin startproject myapi .
+python manage.py startapp products</code></pre>
+
+      <p>Add to <code>INSTALLED_APPS</code> in <code>settings.py</code>:</p>
+      <pre><code>INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    'products',
+]</code></pre>
+
+      <p>Create your model in <code>products/models.py</code>:</p>
+      <pre><code>from django.db import models
+
+class Product(models.Model):
+    name = models.CharField(max_length=200)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.name</code></pre>
+
+      <pre><code>python manage.py makemigrations
+python manage.py migrate</code></pre>
+
+      <h2>Creating Your First API Endpoint</h2>
+      <p>Create <code>products/serializers.py</code>:</p>
+      <pre><code>from rest_framework import serializers
+from .models import Product
+
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__'</code></pre>
+
+      <p>In <code>products/views.py</code>, use a <code>ModelViewSet</code> for instant CRUD:</p>
+      <pre><code>from rest_framework import viewsets
+from .models import Product
+from .serializers import ProductSerializer
+
+class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer</code></pre>
+
+      <p>Wire up URLs in <code>myapi/urls.py</code>:</p>
+      <pre><code>from django.contrib import admin
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from products.views import ProductViewSet
+
+router = DefaultRouter()
+router.register(r'products', ProductViewSet)
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
+]</code></pre>
+
+      <p>Run the server: <code>python manage.py runserver</code></p>
+      <p>Visit <code>http://127.0.0.1:8000/api/products/</code> — you'll see DRF's browsable API. Your endpoints:</p>
+      <ul>
+        <li><code>GET /api/products/</code> — list all</li>
+        <li><code>POST /api/products/</code> — create</li>
+        <li><code>GET /api/products/1/</code> — retrieve</li>
+        <li><code>PUT /api/products/1/</code> — update</li>
+        <li><code>DELETE /api/products/1/</code> — delete</li>
+      </ul>
+
+      <h2>Testing with Thunder Client</h2>
+      <p>Thunder Client is a VS Code extension — a lightweight Postman alternative. Install it from the VS Code marketplace, then:</p>
+      <ol>
+        <li>Open Thunder Client → New Request</li>
+        <li>Set method to <code>POST</code>, URL to <code>http://127.0.0.1:8000/api/products/</code></li>
+        <li>Go to Body → JSON, paste: <code>{"name": "Test Product", "price": "499.00"}</code></li>
+        <li>Hit Send — you should get a <code>201 Created</code> response</li>
+        <li>Switch to <code>GET</code> and hit Send again — your product appears in the list</li>
+      </ol>
+      <p>Thunder Client saves your requests as a collection, so you can re-run them anytime. Much faster than writing curl commands.</p>
+
+      <h2>Deploying to Render for Free</h2>
+      <p>Render gives you a free tier for Django apps. Here's the setup:</p>
+      <ol>
+        <li>Add <code>gunicorn</code> and <code>whitenoise</code> to your requirements: <code>pip install gunicorn whitenoise</code></li>
+        <li>Create <code>requirements.txt</code>: <code>pip freeze > requirements.txt</code></li>
+        <li>Add to <code>settings.py</code>: <code>ALLOWED_HOSTS = ['*']</code> and configure WhiteNoise for static files</li>
+        <li>Push to GitHub</li>
+        <li>Go to <a href="https://render.com" target="_blank" rel="noopener noreferrer">render.com</a> → New Web Service → connect your repo</li>
+        <li>Build command: <code>pip install -r requirements.txt</code></li>
+        <li>Start command: <code>gunicorn myapi.wsgi:application</code></li>
+        <li>Deploy — your API is live at a <code>.onrender.com</code> URL</li>
+      </ol>
+      <p>Free tier spins down after 15 minutes of inactivity, but it's perfect for portfolio projects and demos.</p>
+
+      <h2>Next Steps — Connect to React Frontend</h2>
+      <p>Now that your API is live, connecting it to React takes about 10 minutes:</p>
+      <pre><code># Install axios in your React project
+npm install axios</code></pre>
+
+      <pre><code>// Fetch products in a React component
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
+function Products() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://your-api.onrender.com/api/products/')
+      .then(res => setProducts(res.data));
+  }, []);
+
+  return (
+    &lt;ul&gt;
+      {products.map(p => &lt;li key={p.id}&gt;{p.name} — ₹{p.price}&lt;/li&gt;)}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+
+      <p>One thing to add: <strong>CORS headers</strong>. Install <code>django-cors-headers</code> and add your React app's URL to <code>CORS_ALLOWED_ORIGINS</code> in settings. Without this, your browser will block the API calls.</p>
+      <p>From here, you can add JWT authentication, filtering, pagination, and more. This is the foundation of every React + Django full-stack project — including my <a href="https://goride-0ydm.onrender.com/" target="_blank" rel="noopener noreferrer">GoRide app</a>.</p>
+
+      <hr class="blog-divider">
+      <div class="cta-box">
+        <h3>Need a Django Backend Built for Your Project?</h3>
+        <p>I build REST APIs and full-stack Django + React applications for startups and businesses across India.</p>
+        <a href="/#contact" class="btn-primary"><i class="fas fa-envelope"></i> Let's Talk</a>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-name">Pavan Kiran Nagapuri</div>
+    <div class="footer-role">Full Stack Developer · Hyderabad, India · Available for Hire</div>
+    <div class="copyright">&copy; 2026 Pavan Kiran Nagapuri · Python Full Stack Developer · Hyderabad, India</div>
+  </footer>
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+  </script>
+</body>
+</html>
