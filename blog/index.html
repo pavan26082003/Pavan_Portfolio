@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Web Dev Tips for Startups in India | Pavan Kiran</title>
+  <meta name="description" content="Practical guides on React, Django, Python, SEO, and building web products for startups and businesses in India. By Pavan Kiran, Full Stack Developer in Hyderabad." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pavankiran.netlify.app/blog/" />
+  <meta property="og:title" content="Blog — Web Dev Tips for Startups in India | Pavan Kiran" />
+  <meta property="og:description" content="Practical guides on React, Django, Python, SEO, and building web products for startups in India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pavankiran.netlify.app/blog/" />
+  <meta property="og:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/blog.css">
+  <style>
+    .blog-index { max-width:1100px; margin:0 auto; padding:6rem 1.5rem 4rem; }
+    .blog-index-header { text-align:center; margin-bottom:3rem; }
+    .blog-index-header .section-tag { font-size:0.75rem; color:var(--c1); letter-spacing:0.1em; text-transform:uppercase; font-weight:600; margin-bottom:1rem; }
+    .blog-index-header h1 { font-family:var(--font1); font-size:clamp(2rem,5vw,3rem); font-weight:800; margin-bottom:1rem; }
+    .blog-index-header p { color:var(--muted); max-width:560px; margin:0 auto; }
+    .blog-index-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:1.5rem; }
+    .bi-card { background:var(--card); border:1px solid var(--border); border-radius:16px; overflow:hidden; transition:transform .25s, box-shadow .25s; display:flex; flex-direction:column; }
+    .bi-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
+    .bi-accent { height:4px; }
+    .bi-body { padding:1.5rem; flex:1; display:flex; flex-direction:column; }
+    .bi-tag { font-size:0.72rem; color:var(--c1); letter-spacing:0.08em; text-transform:uppercase; font-weight:600; margin-bottom:0.75rem; }
+    .bi-title { font-family:var(--font1); font-size:1.05rem; font-weight:700; line-height:1.35; margin-bottom:0.75rem; }
+    .bi-title a { color:var(--text); text-decoration:none; }
+    .bi-title a:hover { color:var(--c1); }
+    .bi-excerpt { color:var(--muted); font-size:0.88rem; line-height:1.65; margin-bottom:1rem; flex:1; }
+    .bi-footer { display:flex; align-items:center; justify-content:space-between; margin-top:auto; }
+    .bi-meta { color:var(--subtle); font-size:0.8rem; }
+    .bi-link { display:inline-flex; align-items:center; gap:0.35rem; color:var(--c1); font-size:0.82rem; font-weight:600; text-decoration:none; transition:gap .2s; }
+    .bi-link:hover { gap:0.6rem; }
+    .bi-link i { font-size:0.72rem; }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo" onclick="window.location.href='/'">PK.</div>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right"><a href="/#contact" class="hire-btn">Hire Me</a></div>
+  </nav>
+
+  <main class="blog-index">
+    <div class="blog-index-header">
+      <div class="section-tag">— insights & tips</div>
+      <h1>Web Dev Blog &amp; Tips <span class="gradient-text">for Startups in India</span></h1>
+      <p>Practical guides on React, Django, Python, SEO, and building digital products for startups and businesses across India.</p>
+    </div>
+
+    <div class="blog-index-grid">
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#00d4ff,#7c3aed)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">React · Web Dev</div>
+          <div class="bi-title"><a href="/blog/portfolio-website-that-gets-hired">How to Build a Portfolio Website That Gets You Hired in 2026</a></div>
+          <p class="bi-excerpt">A step-by-step guide to building a React developer portfolio that ranks on Google and impresses recruiters — with real examples.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Jan 15, 2026 · 7 min</span>
+            <a href="/blog/portfolio-website-that-gets-hired" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#f59e0b,#ef4444)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">Django · Python</div>
+          <div class="bi-title"><a href="/blog/django-rest-api-tutorial-beginners">Django REST API Tutorial for Beginners — Build Your First API in 30 Minutes</a></div>
+          <p class="bi-excerpt">Build a production-ready REST API with Django REST Framework. Code examples, Thunder Client testing, and free Render deployment.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Feb 1, 2026 · 8 min</span>
+            <a href="/blog/django-rest-api-tutorial-beginners" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#22c55e,#16a34a)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">SEO · Business</div>
+          <div class="bi-title"><a href="/blog/real-estate-business-website-hyderabad">Why Real Estate Businesses in Hyderabad Need a Website in 2026</a></div>
+          <p class="bi-excerpt">How a professional website generates leads, builds trust, and grows your real estate business in Hyderabad's competitive market.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Feb 20, 2026 · 6 min</span>
+            <a href="/blog/real-estate-business-website-hyderabad" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#6366f1,#8b5cf6)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">React · Next.js</div>
+          <div class="bi-title"><a href="/blog/react-vs-nextjs-startup-2026">React vs Next.js — Which Should You Use for Your Startup in 2026?</a></div>
+          <p class="bi-excerpt">SEO differences, performance, and when to pick React vs Next.js for your Indian startup. A practical guide with a clear recommendation.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Mar 1, 2026 · 6 min</span>
+            <a href="/blog/react-vs-nextjs-startup-2026" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#f97316,#ef4444)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">Business · Pricing</div>
+          <div class="bi-title"><a href="/blog/web-developer-cost-hyderabad">How Much Does It Cost to Hire a Web Developer in Hyderabad? (2026 Price Guide)</a></div>
+          <p class="bi-excerpt">Freelancer vs agency, simple site vs full-stack app, price ranges ₹15K–₹80K, and what affects the cost.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Mar 10, 2026 · 5 min</span>
+            <a href="/blog/web-developer-cost-hyderabad" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#22c55e,#00d4ff)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">React · Django · Case Study</div>
+          <div class="bi-title"><a href="/blog/goride-react-django-case-study">How I Built a Ride-Booking App with React and Django — GoRide Case Study</a></div>
+          <p class="bi-excerpt">Tech stack decisions, architecture, key challenges, GitHub link, and lessons learned building GoRide.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Mar 15, 2026 · 7 min</span>
+            <a href="/blog/goride-react-django-case-study" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#7c3aed,#6366f1)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">Django · Deployment</div>
+          <div class="bi-title"><a href="/blog/deploy-django-render-free-2026">How to Deploy a Django App to Render for Free — Step-by-Step 2026 Guide</a></div>
+          <p class="bi-excerpt">Complete walkthrough: Render setup, database, environment variables, common errors and fixes. Get your Django app live for free.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Mar 20, 2026 · 6 min</span>
+            <a href="/blog/deploy-django-render-free-2026" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#f59e0b,#f97316)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">Career · Personal</div>
+          <div class="bi-title"><a href="/blog/ece-to-full-stack-developer-journey">From ECE to Full Stack Developer — My Journey and What I Learned</a></div>
+          <p class="bi-excerpt">How I went from Electronics &amp; Communication Engineering at VJIT to a Python Full Stack Developer. Resources, first projects, and advice for ECE students.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Mar 25, 2026 · 6 min</span>
+            <a href="/blog/ece-to-full-stack-developer-journey" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#ef4444,#f97316)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">Startup · Business</div>
+          <div class="bi-title"><a href="/blog/web-development-mistakes-startups-hyderabad">Top 5 Web Development Mistakes Startups Make (And How to Avoid Them)</a></div>
+          <p class="bi-excerpt">Skipping mobile-first, no clear CTA, slow loading, bad hosting, ignoring SEO — the 5 mistakes that kill startup websites.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Apr 1, 2026 · 5 min</span>
+            <a href="/blog/web-development-mistakes-startups-hyderabad" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bi-card">
+        <div class="bi-accent" style="background:linear-gradient(90deg,#06b6d4,#6366f1)"></div>
+        <div class="bi-body">
+          <div class="bi-tag">CSS · React · Frontend</div>
+          <div class="bi-title"><a href="/blog/tailwind-css-vs-bootstrap-react-2026">Tailwind CSS vs Bootstrap — Which is Better for React Projects in 2026?</a></div>
+          <p class="bi-excerpt">Setup, performance, customization, learning curve, and a verdict from a developer who has used both in production React projects.</p>
+          <div class="bi-footer">
+            <span class="bi-meta">Apr 10, 2026 · 6 min</span>
+            <a href="/blog/tailwind-css-vs-bootstrap-react-2026" class="bi-link">Read <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-name">Pavan Kiran Nagapuri</div>
+    <div class="footer-role">Full Stack Developer · Hyderabad, India · Available for Hire</div>
+    <div class="copyright">&copy; 2026 Pavan Kiran Nagapuri · Python Full Stack Developer · Hyderabad, India</div>
+  </footer>
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+  </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Deploy a Django App to Render for Free — Step-by-Step 2026 Guide | Pavan Kiran</title>
+  <meta name="description" content="Step-by-step guide to deploying a Django app to Render for free in 2026. Account setup, configuration, database, environment variables, common errors and fixes." />
+  <meta name="author" content="Pavan Kiran Nagapuri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pavankiran.netlify.app/blog/deploy-django-render-free-2026" />
+  <meta property="og:title" content="How to Deploy a Django App to Render for Free — Step-by-Step 2026 Guide" />
+  <meta property="og:description" content="Step-by-step: deploy Django to Render free tier in 2026. Database, env vars, common errors and fixes." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://pavankiran.netlify.app/blog/deploy-django-render-free-2026" />
+  <meta property="og:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Deploy Django to Render Free — 2026 Step-by-Step Guide" />
+  <meta name="twitter:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Deploy a Django App to Render for Free — Step-by-Step 2026 Guide",
+    "description": "Step-by-step guide to deploying a Django app to Render for free in 2026.",
+    "image": "https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp",
+    "author": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "publisher": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "datePublished": "2026-03-20",
+    "dateModified": "2026-04-17",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://pavankiran.netlify.app/blog/deploy-django-render-free-2026" },
+    "keywords": "deploy django render free 2026, netlify render deployment react django guide, django deployment tutorial"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pavankiran.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pavankiran.netlify.app/#blog" },
+      { "@type": "ListItem", "position": 3, "name": "Deploy Django to Render Free — 2026 Guide", "item": "https://pavankiran.netlify.app/blog/deploy-django-render-free-2026" }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo" onclick="window.location.href='/'">PK.</div>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right"><a href="/#contact" class="hire-btn">Hire Me</a></div>
+  </nav>
+
+  <main class="blog-page">
+    <a href="/#blog" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    <div class="post-tag">Django · Deployment</div>
+    <h1>How to Deploy a Django App to Render for Free — Step-by-Step 2026 Guide</h1>
+    <div class="post-meta">
+      <span><i class="fas fa-user"></i> Pavan Kiran Nagapuri</span>
+      <span><i class="fas fa-calendar"></i> March 20, 2026</span>
+      <span><i class="fas fa-clock"></i> 6 min read</span>
+    </div>
+
+    <div class="post-body">
+      <p>Render is the best free platform for deploying Django apps in 2026. It replaced Heroku's free tier and is significantly easier to use. This guide walks you through the complete deployment process — from creating your Render account to getting a live URL — including the common errors that trip up most developers.</p>
+
+      <h2>Create a Render Account</h2>
+      <p>Go to <a href="https://render.com" target="_blank" rel="noopener noreferrer">render.com</a> and sign up with your GitHub account. This is important — connecting GitHub makes deployments automatic. Every time you push to your main branch, Render redeploys automatically.</p>
+
+      <h2>Configure Your Django Project</h2>
+      <p>Before deploying, your project needs a few additions:</p>
+
+      <h3>1. Install required packages</h3>
+      <pre><code>pip install gunicorn whitenoise dj-database-url psycopg2-binary
+pip freeze > requirements.txt</code></pre>
+
+      <h3>2. Update settings.py</h3>
+      <pre><code>import dj_database_url
+import os
+
+# Allow Render's domain
+ALLOWED_HOSTS = ['*']
+
+# WhiteNoise for static files
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add this second
+    ...
+]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Database — uses DATABASE_URL env var on Render
+DATABASES = {
+    'default': dj_database_url.config(
+        default=f'sqlite:///{BASE_DIR}/db.sqlite3',
+        conn_max_age=600
+    )
+}</code></pre>
+
+      <h3>3. Create a build script</h3>
+      <p>Create <code>build.sh</code> in your project root:</p>
+      <pre><code>#!/usr/bin/env bash
+set -o errexit
+pip install -r requirements.txt
+python manage.py collectstatic --no-input
+python manage.py migrate</code></pre>
+      <p>Make it executable: <code>chmod +x build.sh</code></p>
+
+      <h2>Database Setup</h2>
+      <p>Render's free tier includes a PostgreSQL database (expires after 90 days on free plan). To create one:</p>
+      <ol>
+        <li>In your Render dashboard, click "New" → "PostgreSQL"</li>
+        <li>Give it a name and select the free plan</li>
+        <li>Copy the "Internal Database URL" — you'll need this next</li>
+      </ol>
+
+      <h2>Environment Variables</h2>
+      <p>In your Render web service settings, add these environment variables:</p>
+      <ul>
+        <li><code>DATABASE_URL</code> — paste the Internal Database URL from your PostgreSQL service</li>
+        <li><code>SECRET_KEY</code> — generate a new one: <code>python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"</code></li>
+        <li><code>DEBUG</code> — set to <code>False</code></li>
+        <li><code>PYTHON_VERSION</code> — set to <code>3.11.0</code></li>
+      </ul>
+      <div class="callout"><p>Never commit your SECRET_KEY or DATABASE_URL to GitHub. Always use environment variables for sensitive config.</p></div>
+
+      <h2>Deploy on Render</h2>
+      <ol>
+        <li>In Render dashboard, click "New" → "Web Service"</li>
+        <li>Connect your GitHub repo</li>
+        <li>Set these values:
+          <ul>
+            <li><strong>Build Command:</strong> <code>./build.sh</code></li>
+            <li><strong>Start Command:</strong> <code>gunicorn yourproject.wsgi:application</code></li>
+            <li><strong>Plan:</strong> Free</li>
+          </ul>
+        </li>
+        <li>Click "Create Web Service" — Render starts building</li>
+        <li>Watch the build logs — your app is live when you see "Your service is live"</li>
+      </ol>
+
+      <h2>Common Errors and Fixes</h2>
+
+      <h3>Error: "ModuleNotFoundError: No module named 'yourapp'"</h3>
+      <p>Your <code>requirements.txt</code> is missing or outdated. Run <code>pip freeze > requirements.txt</code> again and push.</p>
+
+      <h3>Error: "DisallowedHost"</h3>
+      <p>Add your Render URL to <code>ALLOWED_HOSTS</code>: <code>ALLOWED_HOSTS = ['yourapp.onrender.com', 'localhost']</code></p>
+
+      <h3>Error: Static files not loading (404)</h3>
+      <p>Make sure WhiteNoise is in MIDDLEWARE (second position, after SecurityMiddleware) and <code>collectstatic</code> runs in your build script.</p>
+
+      <h3>Error: Database connection refused</h3>
+      <p>Check that <code>DATABASE_URL</code> environment variable is set correctly in Render. Use the Internal URL (not External) for services on the same Render account.</p>
+
+      <h2>Your Live URL</h2>
+      <p>Once deployed, your app is live at <code>https://yourapp.onrender.com</code>. Share it in your portfolio, GitHub README, and LinkedIn. This is exactly how my <a href="https://goride-0ydm.onrender.com/" target="_blank" rel="noopener noreferrer">GoRide app</a> is deployed.</p>
+      <p>Remember: the free tier spins down after 15 minutes of inactivity. The first request after a cold start takes 30–60 seconds. For production apps, upgrade to a paid plan (starts at $7/month).</p>
+
+      <hr class="blog-divider">
+      <div class="cta-box">
+        <h3>Need Help Deploying Your Django App?</h3>
+        <p>I build and deploy Django + React applications for startups and businesses across India.</p>
+        <a href="/#contact" class="btn-primary"><i class="fas fa-envelope"></i> Get in Touch</a>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-name">Pavan Kiran Nagapuri</div>
+    <div class="footer-role">Full Stack Developer · Hyderabad, India · Available for Hire</div>
+    <div class="copyright">&copy; 2026 Pavan Kiran Nagapuri · Python Full Stack Developer · Hyderabad, India</div>
+  </footer>
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+  </script>
+</body>
+</html>

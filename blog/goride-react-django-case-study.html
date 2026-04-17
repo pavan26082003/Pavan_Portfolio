@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Built a Ride-Booking App with React and Django — GoRide Case Study | Pavan Kiran</title>
+  <meta name="description" content="Full case study of GoRide — a ride-booking app built with React and Django. Tech stack decisions, architecture, key challenges, GitHub link, and lessons learned." />
+  <meta name="author" content="Pavan Kiran Nagapuri" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://pavankiran.netlify.app/blog/goride-react-django-case-study" />
+  <meta property="og:title" content="How I Built a Ride-Booking App with React and Django — GoRide Case Study" />
+  <meta property="og:description" content="Full case study of GoRide — tech stack, architecture, key challenges, and lessons learned building a full-stack app with React and Django." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://pavankiran.netlify.app/blog/goride-react-django-case-study" />
+  <meta property="og:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GoRide Case Study — React + Django Ride-Booking App" />
+  <meta name="twitter:image" content="https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How I Built a Ride-Booking App with React and Django — GoRide Case Study",
+    "description": "Full case study of GoRide — a ride-booking app built with React and Django. Tech stack, architecture, challenges, and lessons learned.",
+    "image": "https://pavankiran.netlify.app/assets/images/Pavan-porfil.webp",
+    "author": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "publisher": { "@type": "Person", "name": "Pavan Kiran Nagapuri", "url": "https://pavankiran.netlify.app/" },
+    "datePublished": "2026-03-15",
+    "dateModified": "2026-04-17",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://pavankiran.netlify.app/blog/goride-react-django-case-study" },
+    "keywords": "react django full stack project tutorial, goride app, ride booking app react django github, full stack project case study"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pavankiran.netlify.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://pavankiran.netlify.app/#blog" },
+      { "@type": "ListItem", "position": 3, "name": "GoRide Case Study — React + Django", "item": "https://pavankiran.netlify.app/blog/goride-react-django-case-study" }
+    ]
+  }
+  </script>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo" onclick="window.location.href='/'">PK.</div>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#blog">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right"><a href="/#contact" class="hire-btn">Hire Me</a></div>
+  </nav>
+
+  <main class="blog-page">
+    <a href="/#blog" class="back-link"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+    <div class="post-tag">React · Django · Case Study</div>
+    <h1>How I Built a Ride-Booking App with React and Django — GoRide Case Study</h1>
+    <div class="post-meta">
+      <span><i class="fas fa-user"></i> Pavan Kiran Nagapuri</span>
+      <span><i class="fas fa-calendar"></i> March 15, 2026</span>
+      <span><i class="fas fa-clock"></i> 7 min read</span>
+    </div>
+
+    <div class="post-body">
+      <p><a href="https://goride-0ydm.onrender.com/" target="_blank" rel="noopener noreferrer">GoRide</a> is a full-stack ride-booking web application I built using React and Django. It's my most complex project — featuring user authentication, a REST API backend, real-time booking flow, and deployment on Render. This is the full story: why I built it, how I built it, and what I learned.</p>
+
+      <h2>Project Overview</h2>
+      <p>GoRide lets users book rides between locations. The core features:</p>
+      <ul>
+        <li>User registration and login (JWT authentication)</li>
+        <li>Route selection with pickup and drop-off points</li>
+        <li>Seat selection and booking confirmation</li>
+        <li>Booking history for logged-in users</li>
+        <li>Admin panel for managing routes and bookings</li>
+      </ul>
+      <p>The goal was to build something that felt like a real product — not a tutorial clone. I wanted to solve a real problem (booking rides) with a real tech stack (React + Django) and deploy it publicly.</p>
+
+      <h2>Tech Stack Decision</h2>
+      <p>Why React + Django instead of a simpler stack?</p>
+      <ul>
+        <li><strong>React</strong> — for a dynamic, interactive frontend. The booking flow has multiple steps (route → seats → confirmation) that benefit from React's state management.</li>
+        <li><strong>Django</strong> — for the backend. Django's ORM makes database operations clean, and Django REST Framework makes building APIs fast. Python is also my strongest language.</li>
+        <li><strong>MySQL</strong> — for the database. Relational data (users, routes, bookings) fits a relational database perfectly.</li>
+        <li><strong>Tailwind CSS</strong> — for styling. Utility-first CSS is faster to write and easier to maintain than custom CSS for a project this size.</li>
+        <li><strong>Render</strong> — for deployment. Free tier, easy GitHub integration, and supports both the React frontend and Django backend.</li>
+      </ul>
+
+      <h2>Architecture</h2>
+      <p>The app is split into two separate services:</p>
+      <ul>
+        <li><strong>Frontend:</strong> React app (Vite) deployed as a static site on Render. Communicates with the backend via REST API calls using Axios.</li>
+        <li><strong>Backend:</strong> Django + DRF deployed as a web service on Render. Handles authentication, business logic, and database operations.</li>
+      </ul>
+      <p>The two services communicate via HTTPS. CORS is configured on the Django side to allow requests from the React frontend's domain. JWT tokens are stored in localStorage and sent with every authenticated request.</p>
+
+      <h2>Key Challenges</h2>
+
+      <h3>Seat Selection Logic</h3>
+      <p>The hardest part was the seat selection UI. I needed to show a grid of seats, mark booked seats as unavailable in real-time, and handle concurrent bookings (two users trying to book the same seat simultaneously).</p>
+      <p>My solution: the frontend fetches available seats when the user opens the booking page. On the backend, I used Django's <code>select_for_update()</code> to lock the seat row during the booking transaction, preventing race conditions. If a seat gets booked between the user viewing it and submitting, they get a clear error message.</p>
+
+      <h3>CORS Configuration</h3>
+      <p>Getting CORS right between the React frontend and Django backend took longer than expected. The fix:</p>
+      <pre><code># settings.py
+INSTALLED_APPS += ['corsheaders']
+MIDDLEWARE = ['corsheaders.middleware.CorsMiddleware', ...MIDDLEWARE]
+CORS_ALLOWED_ORIGINS = [
+    "https://your-react-app.onrender.com",
+]</code></pre>
+
+      <h3>Render Free Tier Cold Starts</h3>
+      <p>Render's free tier spins down after 15 minutes of inactivity. The first request after a cold start takes 30–60 seconds. I added a loading state to the frontend so users see a spinner instead of a blank screen during cold starts.</p>
+
+      <h2>GitHub Link</h2>
+      <p>The full source code is on GitHub: <a href="https://github.com/pavan26082003/Go_Ride_Django.git" target="_blank" rel="noopener noreferrer">github.com/pavan26082003/Go_Ride_Django</a></p>
+      <p>The repo includes the Django backend and React frontend. README has setup instructions for running it locally.</p>
+
+      <h2>Lessons Learned</h2>
+      <ul>
+        <li><strong>Plan your API before writing frontend code.</strong> I wasted time refactoring the React components when I changed the API response structure mid-project. Define your API contracts first.</li>
+        <li><strong>JWT refresh tokens matter.</strong> My first version used short-lived access tokens without refresh tokens. Users got logged out every 5 minutes. Add refresh token logic from the start.</li>
+        <li><strong>Mobile-first is non-negotiable.</strong> I built desktop-first and spent extra time making it responsive. Start with mobile.</li>
+        <li><strong>Deploy early, deploy often.</strong> I waited until the project was "done" to deploy. Deploying early would have caught environment-specific bugs sooner.</li>
+        <li><strong>Real projects teach more than tutorials.</strong> Building GoRide taught me more about React state management, Django ORM, and REST API design than any course I've taken.</li>
+      </ul>
+
+      <hr class="blog-divider">
+      <div class="cta-box">
+        <h3>Want a Full Stack App Built for Your Idea?</h3>
+        <p>I build React + Django web applications for startups and businesses in Hyderabad and across India.</p>
+        <a href="/#contact" class="btn-primary"><i class="fas fa-envelope"></i> Let's Build It</a>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-name">Pavan Kiran Nagapuri</div>
+    <div class="footer-role">Full Stack Developer · Hyderabad, India · Available for Hire</div>
+    <div class="copyright">&copy; 2026 Pavan Kiran Nagapuri · Python Full Stack Developer · Hyderabad, India</div>
+  </footer>
+  <script>
+    const nav = document.getElementById('navbar');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 80));
+  </script>
+</body>
+</html>
