@@ -1256,6 +1256,34 @@
       color: var(--text)
     }
 
+    .ci-value a {
+      color: var(--c1);
+      text-decoration: none;
+      transition: all var(--tr);
+      position: relative;
+      display: inline-block;
+    }
+
+    .ci-value a:hover {
+      color: var(--c2);
+      transform: translateX(4px);
+    }
+
+    .ci-value a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--c1), var(--c2));
+      transition: width var(--tr);
+    }
+
+    .ci-value a:hover::after {
+      width: 100%;
+    }
+
     .form-box {
       background: var(--glass);
       border: 1px solid var(--glassborder);
